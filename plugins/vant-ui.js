@@ -10,7 +10,9 @@ import {
   Tab,
   Tabs,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  NavBar,
+  TreeSelect 
 } from 'vant'
 
 Vue.use(NoticeBar);
@@ -24,3 +26,5 @@ Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
+Vue.use(NavBar);
+Vue.use(TreeSelect);

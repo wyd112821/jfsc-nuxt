@@ -1,25 +1,25 @@
 <template>
     <div class="menu-bar">
         <van-tabbar v-model="active">
-            <van-tabbar-item to="/">
+            <van-tabbar-item name="index" to="/">
                 <span>首页</span>
                 <template #icon="props">
                     <i class="iconfont icontubiao-06"></i>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item to="/home">
+            <van-tabbar-item name="classify" to="/classify">
                 <span>分类</span>
                 <template #icon="props">
                     <i class="iconfont icontubiao-05"></i>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item to="/home">
+            <van-tabbar-item name="cart" to="/cart">
                 <span>购物车</span>
                 <template #icon="props">
                     <i class="iconfont icontubiao-07"></i>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item to="/home">
+            <van-tabbar-item class="my" to="/my">
                 <span>我的</span>
                 <template #icon="props">
                     <i class="iconfont icontubiao-08"></i>
@@ -33,8 +33,11 @@
 export default {
     data() {
         return {
-            active: 0
+            active: 'index'
         };
+    },
+    mounted() {
+        this.active = $nuxt.$route.name
     }
 };
 </script>

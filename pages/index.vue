@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+        <my-header></my-header>
+
         <van-swipe class="swipe-section" :autoplay="3000">
             <van-swipe-item v-for="(image, index) in images" :key="index">
                 <img v-lazy="image" />
@@ -85,10 +87,20 @@
                 <nuxt-link class="more-btn" :to="item.id" tag="p">点击查看更多</nuxt-link>
             </van-tab>
         </van-tabs>
+
+        <footer class="index-footer">
+          <div class="footer-nav">
+            <nuxt-link to="/">积分问题</nuxt-link>
+            <nuxt-link to="/">商品问题</nuxt-link>
+            <nuxt-link to="/">关于集市</nuxt-link>
+          </div>
+          <p class="footer-copyright">Copyright © 2008-2028 [聚名网] Juming INC, All Rights Reserved</p>
+        </footer>
     </div>
 </template>
 
 <script>
+import MyHeader from "@/components/public/header/index";
 import List from "@/components/index/list.vue";
 export default {
     data() {
@@ -282,7 +294,8 @@ export default {
         };
     },
     components: {
-        List
+        List,
+        MyHeader
     }
 };
 </script>
