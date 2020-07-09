@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import navBar from './modules/navBar'
+import menuBar from './modules/menuBar'
 
 Vue.use(Vuex)
 
 const store = () => new Vuex.Store({
-    modules: {
-        navBar
-    }
+  modules: {
+    menuBar,
+  }
 })
 
 export default store

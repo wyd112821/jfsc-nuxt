@@ -1,5 +1,8 @@
 export default {
-  mode: 'universal',
+  mode: 'spa',
+  router: {
+    mode: 'hash'
+  },
   /*
    ** Headers of the page
    */
@@ -57,7 +60,9 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    '@nuxtjs/axios'
+  ],
   /*
    ** Build configuration
    */
@@ -93,6 +98,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+    cache: false
   }
 }

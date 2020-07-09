@@ -1,43 +1,47 @@
 <template>
-    <div class="menu-bar">
-        <van-tabbar v-model="active">
-            <van-tabbar-item name="index" to="/">
-                <span>首页</span>
-                <template #icon="props">
-                    <i class="iconfont icontubiao-06"></i>
-                </template>
-            </van-tabbar-item>
-            <van-tabbar-item name="classify" to="/classify">
-                <span>分类</span>
-                <template #icon="props">
-                    <i class="iconfont icontubiao-05"></i>
-                </template>
-            </van-tabbar-item>
-            <van-tabbar-item name="cart" to="/cart">
-                <span>购物车</span>
-                <template #icon="props">
-                    <i class="iconfont icontubiao-07"></i>
-                </template>
-            </van-tabbar-item>
-            <van-tabbar-item class="my" to="/my">
-                <span>我的</span>
-                <template #icon="props">
-                    <i class="iconfont icontubiao-08"></i>
-                </template>
-            </van-tabbar-item>
-        </van-tabbar>
-    </div>
+    <van-tabbar v-model="active" class="menu-bar" ref="menuBar">
+        <van-tabbar-item name="index" to="/">
+            <span>首页</span>
+            <template #icon="props">
+                <i class="iconfont icontubiao-06"></i>
+            </template>
+        </van-tabbar-item>
+        <van-tabbar-item name="classify" to="/classify">
+            <span>分类</span>
+            <template #icon="props">
+                <i class="iconfont icontubiao-05"></i>
+            </template>
+        </van-tabbar-item>
+        <van-tabbar-item name="cart" to="/cart">
+            <span>购物车</span>
+            <template #icon="props">
+                <i class="iconfont icontubiao-07"></i>
+            </template>
+        </van-tabbar-item>
+        <van-tabbar-item class="my" to="/my">
+            <span>我的</span>
+            <template #icon="props">
+                <i class="iconfont icontubiao-08"></i>
+            </template>
+        </van-tabbar-item>
+    </van-tabbar>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            active: 'index'
+            active: "index",
+            h: 0
         };
     },
     mounted() {
-        this.active = $nuxt.$route.name
+        this.active = $nuxt.$route.name;
+        this.h = this.$refs["menuBar"].$el.offsetHeight;
+        this.$store.commit("menuBar/setHeight", this.h);
+
+        let h1 = this.$store.state.menuBar.height;
+        console.log(h1);
     }
 };
 </script>

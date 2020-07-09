@@ -13,7 +13,7 @@
                 </div>
                 <div class="mc">{{ item.mc }}</div>
                 <div class="dhjf">{{ item.dhjf }}积分+0元</div>
-                <div class="nums">{{ item.nums }}人已兑换</div>
+                <div class="nums">{{ item.dhrs }}人已兑换</div>
             </nuxt-link>
         </div>
     </div>
