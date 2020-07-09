@@ -212,21 +212,21 @@ export default {
         }
     },
     async mounted() {
-        let {
-            status,
-            data: {
-                code,
-                data: {}
-            }
-        } = await this.$axios.get("http://192.168.1.182/main/flList");
+        // let {
+        //     status,
+        //     data: {
+        //         code,
+        //         data: {}
+        //     }
+        // } = await this.$axios.get("http://192.168.1.182/main/flList");
 
-        let {
-            status: status2,
-            data: {
-                code: code2,
-                data: {}
-            }
-        } = await this.$axios.get("http://192.168.1.182/main/bqList");
+        // let {
+        //     status: status2,
+        //     data: {
+        //         code: code2,
+        //         data: {}
+        //     }
+        // } = await this.$axios.get("http://192.168.1.182/main/bqList");
 
         let h =
             window.innerHeight ||
