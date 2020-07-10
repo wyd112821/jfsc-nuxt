@@ -35,13 +35,20 @@ export default {
             h: 0
         };
     },
+    watch: {
+        $route(to, from) {
+            //监听路由变化
+            this.active = to.name;
+        }
+    },
     mounted() {
+        //页面加载获取路由名称
         this.active = $nuxt.$route.name;
-        this.h = this.$refs["menuBar"].$el.offsetHeight;
-        this.$store.commit("menuBar/setHeight", this.h);
 
-        let h1 = this.$store.state.menuBar.height;
-        console.log(h1);
+        // this.h = this.$refs["menuBar"].$el.offsetHeight;
+        // this.$store.commit("menuBar/setHeight", this.h);
+        // let h1 = this.$store.state.menuBar.height;
+        // console.log(h1);
     }
 };
 </script>

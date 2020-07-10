@@ -15,7 +15,10 @@ import {
   TreeSelect,
   Search,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Button,
+  List,
+  Loading
 } from 'vant'
 
 Vue.use(NoticeBar);
@@ -34,3 +37,6 @@ Vue.use(TreeSelect);
 Vue.use(Search);
 Vue.use(DropdownMenu);
 Vue.use(DropdownItem);
+Vue.use(Button);
+Vue.use(List);
+Vue.use(Loading);

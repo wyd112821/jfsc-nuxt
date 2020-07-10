@@ -14,6 +14,7 @@
                 :key="idx"
                 :icon="item.icon"
                 :text="item.text"
+                :to="item.path"
             />
         </van-grid>
 
@@ -112,35 +113,43 @@ export default {
             navs: [
                 {
                     text: "本站产品",
-                    icon: require("@/assets/image/bzcp-icon.png")
+                    icon: require("@/assets/image/bzcp-icon.png"),
+                    path: "/classify?flid=1"
                 },
                 {
                     text: "虚拟卡币",
-                    icon: require("@/assets/image/xnkb-icon.png")
+                    icon: require("@/assets/image/xnkb-icon.png"),
+                    path: "/classify?flid=2"
                 },
                 {
                     text: "商品百货",
-                    icon: require("@/assets/image/spbh-icon.png")
+                    icon: require("@/assets/image/spbh-icon.png"),
+                    path: "/classify?flid=3"
                 },
                 {
                     text: "吃喝玩乐",
-                    icon: require("@/assets/image/chwl-icon.png")
+                    icon: require("@/assets/image/chwl-icon.png"),
+                    path: "/classify?flid=4"
                 },
                 {
                     text: "商品分类",
-                    icon: require("@/assets/image/spfl-icon.png")
+                    icon: require("@/assets/image/spfl-icon.png"),
+                    path: "/classify"
                 },
                 {
                     text: "我能兑换",
-                    icon: require("@/assets/image/wndh-icon.png")
+                    icon: require("@/assets/image/wndh-icon.png"),
+                    path: "/classify"
                 },
                 {
                     text: "热门商品",
-                    icon: require("@/assets/image/rmsp-icon.png")
+                    icon: require("@/assets/image/rmsp-icon.png"),
+                    path: "/classify"
                 },
                 {
                     text: "低分商品",
-                    icon: require("@/assets/image/dfsp-icon.png")
+                    icon: require("@/assets/image/dfsp-icon.png"),
+                    path: ""
                 }
             ],
             noticeTitle: require("@/assets/image/notice-title.png"),
